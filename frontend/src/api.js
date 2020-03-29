@@ -7,9 +7,14 @@ export const fetchNotes = async () => {
       return data
     })
 }
-// export const fetchNote = (id) => {
 
-// }
+export const fetchNote = (id) => {
+  return fetch(`${url + id}`, {})
+    .then(res => res.json())
+    .then(data => {
+      return data
+    })
+}
 
 export const addNote = (note) => {
   fetch(url, {
